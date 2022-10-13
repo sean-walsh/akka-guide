@@ -1,4 +1,4 @@
-= Lightbend Akka Platform Guide README
+= Lightbend Akka Guide README
 
 The source files for this guide use asciidoc syntax and the project is configured to build with Antora. To review and suggest changes, we recommend building the HTML files locally. This allows you to view the guide structure as a whole and to read pages the way someone using the documentation would.
 

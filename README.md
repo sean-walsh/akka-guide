@@ -1,10 +1,10 @@
-Akka Platform Guide
-===================
+Akka Guide
+==========
 
 Review and feedback
 -------------------
 
-This is the repository for the Akka Platform Guide and we would love to hear your feedback.
+This is the repository for the Akka Guide and we would love to hear your feedback.
 
 This guide is published at https://developer.lightbend.com/docs/akka-platform-guide/
 

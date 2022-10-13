@@ -227,7 +227,7 @@ $ pulumi stack output operatorNamespace
 lightbend
 ----
 
-NOTE: Pulumi has an issue with tracking ready status for containers with sidecars. In GCP implementation of the Akka Platform Operator, Usage-based Billing Agent (ubbagent)
+NOTE: Pulumi has an issue with tracking ready status for containers with sidecars. In GCP implementation of the Akka Operator, Usage-based Billing Agent (ubbagent)
 is implemented as a sidecar. Hence you may see the following failure in `pulumi up` where the update of the stack fails for akka-operator:
 
 [source,shell script]

@@ -8,7 +8,7 @@ To install Akka Cloud Platform on Amazon Elastic Kubernetes Service (EKS), you m
 == Key Information for Akka Cloud Platform on AWS
 The links and info below provide rapid access to some of the more important information used to manage your Akka Cloud Platform.
 
-- Kubernetes Akka Platform Operator — Operator management is key. You can find a quickstart guide in the xref:deployment:aws-install-quickstart.adoc[quick start].
+- Kubernetes Akka Operator — Operator management is key. You can find a quickstart guide in the xref:deployment:aws-install-quickstart.adoc[quick start].
 For AWS installation details see the xref:deployment:aws-install.adoc[installing] and xref:deployment:aws-install.adoc#_update_akka_operator[updating] the Akka Operator sections on the Installation in Amazon EKS page.
 
 - TLS Certificates — TLS certificates are required for external access to applications managed by Akka Cloud Platform. You will find the pertinent information within the xref:deployment:aws-ingress.adoc#_tls_certificate[AWS LoadBalancer Controller] page.

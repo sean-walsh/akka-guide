@@ -1,11 +1,11 @@
-= Akka Platform Guide
+= Akka Guide
 :description: Guided documentation of Akka for specific use cases
 
 include::partial$include.adoc[]
 
 
 === What is this guide about?
-This guide provides information to aid in understanding and using the Akka Platform and the Akka Cloud Platform.
+This guide provides information to aid in understanding and using Akka and the Akka Cloud Platform.
 
 === What are Akka Platform, and Akka Cloud Platform?
 Akka Platform is a toolkit for building highly concurrent systems that are scalable, highly efficient, and resilient by using _Reactive Principles_. The Akka Platform includes support for Akka, additional commercial components, and is available from Lightbend as a https://www.lightbend.com/akka-platform#subscription[subscription {tab-icon}, window="tab"]. You can check out our five-part https://info.lightbend.com/akka-platform-workshop-five-parts-on-demand-register.html[Akka Platform workshop {tab-icon}, window="tab"] for developers, for a guided, hands-on walkthrough of Akka Platform.
