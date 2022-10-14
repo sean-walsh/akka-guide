@@ -356,19 +356,6 @@ cp ${SRC} ${tutorial_root}/shopping-analytics-service-java/src/test/resources/
 cp ${SRC} ${tutorial_root}/00-shopping-order-service-java/src/test/resources/
 cp ${SRC} ${tutorial_root}/shopping-order-service-java/src/test/resources/
 
-declare SRC="${tutorial_root}/00-shopping-cart-service-scala/kubernetes/shopping-cart-service-cr.yml"
-cp ${SRC} ${tutorial_root}/01-shopping-cart-service-scala/kubernetes/
-cp ${SRC} ${tutorial_root}/00-shopping-cart-service-java/kubernetes/
-cp ${SRC} ${tutorial_root}/01-shopping-cart-service-java/kubernetes/
-
-declare SRC="${tutorial_root}/00-shopping-order-service-scala/kubernetes/shopping-order-service-cr.yml"
-cp ${SRC} ${tutorial_root}/shopping-order-service-scala/kubernetes/
-cp ${SRC} ${tutorial_root}/00-shopping-order-service-java/kubernetes/
-cp ${SRC} ${tutorial_root}/shopping-order-service-java/kubernetes/
-
-declare SRC="${tutorial_root}/00-shopping-analytics-service-scala/kubernetes/shopping-analytics-service-cr.yml"
-cp ${SRC} ${tutorial_root}/00-shopping-analytics-service-java/kubernetes/
-
 # scala source file
 declare SRC="${tutorial_root}/00-shopping-cart-service-scala/src/main/scala/shopping/cart/CborSerializable.scala"
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-scala/src/main/scala/shopping/cart/
@@ -457,14 +444,6 @@ cp ${SRC} ${tutorial_root}/04-shopping-cart-service-java/ddl-scripts/
 declare SRC="${tutorial_root}/shopping-cart-service-scala/ddl-scripts/create_user_tables.sql"
 cp ${SRC} ${tutorial_root}/05-shopping-cart-service-scala/ddl-scripts/
 cp ${SRC} ${tutorial_root}/04-shopping-cart-service-scala/ddl-scripts/
-
-declare SRC="${tutorial_root}/shopping-cart-service-scala/kubernetes/shopping-cart-service-cr.yml"
-cp ${SRC} ${tutorial_root}/05-shopping-cart-service-scala/kubernetes/
-cp ${SRC} ${tutorial_root}/05-shopping-cart-service-java/kubernetes/
-cp ${SRC} ${tutorial_root}/shopping-cart-service-java/kubernetes/
-
-declare SRC="${tutorial_root}/shopping-analytics-service-scala/kubernetes/shopping-analytics-service-cr.yml"
-cp ${SRC} ${tutorial_root}/shopping-analytics-service-java/kubernetes/
 
 # scala sources
 declare SRC="${tutorial_root}/shopping-cart-service-scala/src/main/scala/shopping/cart/ItemPopularityProjection.scala"
@@ -617,13 +596,6 @@ cp ${SRC} ${tutorial_root}/02-shopping-cart-service-scala/src/main/resources/
 
 cp ${SRC} ${tutorial_root}/03-shopping-cart-service-java/src/main/resources/
 cp ${SRC} ${tutorial_root}/02-shopping-cart-service-java/src/main/resources/
-
-declare SRC="${tutorial_root}/04-shopping-cart-service-scala/kubernetes/shopping-cart-service-cr.yml"
-cp ${SRC} ${tutorial_root}/03-shopping-cart-service-scala/kubernetes/
-cp ${SRC} ${tutorial_root}/02-shopping-cart-service-scala/kubernetes/
-cp ${SRC} ${tutorial_root}/04-shopping-cart-service-java/kubernetes/
-cp ${SRC} ${tutorial_root}/03-shopping-cart-service-java/kubernetes/
-cp ${SRC} ${tutorial_root}/02-shopping-cart-service-java/kubernetes/
 
 # from 02
 declare SRC="${tutorial_root}/02-shopping-cart-service-scala/src/main/protobuf/ShoppingCartService.proto"
