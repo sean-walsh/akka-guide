@@ -7,7 +7,7 @@ on:
 jobs:
   copy-identical-files:
     name: Verify identical files are correct
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
 
   java-compile-and-test-part1:
     name: Compile and Test Part 1 (Java)
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -79,7 +79,7 @@ jobs:
 
   java-compile-and-test-part2:
     name: Compile and Test Part 2 (Java)
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -109,7 +109,7 @@ jobs:
 
   scala-compile-and-test-part1:
     name: Compile and Test Part 1 (Scala)
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -160,7 +160,7 @@ jobs:
 
   scala-compile-and-test-part2:
     name: Compile and Test Part 2 (Scala)
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2

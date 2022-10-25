@@ -10,7 +10,7 @@ env:
 
 jobs:
   validate-java-sample:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
         run: scripts/mvn-test.sh ./docs-source/docs/modules/telemetry/examples/telemetry-sample
 
   validate-scala-sample:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
