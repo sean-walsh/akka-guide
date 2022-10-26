@@ -22,15 +22,15 @@ Test / logBuffered := false
 run / fork := false
 Global / cancelable := false // ctrl-c
 
-val AkkaVersion = "2.6.20"
-val AkkaHttpVersion = "10.2.10"
-val AkkaManagementVersion = "1.1.4"
+val AkkaVersion = "2.7.0"
+val AkkaHttpVersion = "10.4.0"
+val AkkaManagementVersion = "1.2.0"
 // tag::akka-persistence-cassandra[]
-val AkkaPersistenceCassandraVersion = "1.0.6"
+val AkkaPersistenceCassandraVersion = "1.1.0"
 
 // end::akka-persistence-cassandra[]
-val AlpakkaKafkaVersion = "3.0.1"
-val AkkaProjectionVersion = "1.2.5"
+val AlpakkaKafkaVersion = "4.0.0"
+val AkkaProjectionVersion = "1.3.0"
 
 enablePlugins(AkkaGrpcPlugin)
 
@@ -59,7 +59,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-discovery" % AkkaVersion,
   // Common dependencies for logging and testing
   "com.typesafe.akka" %% "akka-slf4j" % AkkaVersion,
-  "ch.qos.logback" % "logback-classic" % "1.2.9",
+  "ch.qos.logback" % "logback-classic" % "1.2.11",
   "org.scalatest" %% "scalatest" % "3.1.2" % Test,
   // 2. Using gRPC and/or protobuf
   "com.typesafe.akka" %% "akka-http2-support" % AkkaHttpVersion,

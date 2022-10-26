@@ -22,21 +22,21 @@ Test / logBuffered := false
 run / fork := false
 Global / cancelable := false // ctrl-c
 
-val AkkaVersion = "2.6.20"
-val AkkaHttpVersion = "10.2.10"
-val AkkaManagementVersion = "1.1.4"
+val AkkaVersion = "2.7.0"
+val AkkaHttpVersion = "10.4.0"
+val AkkaManagementVersion = "1.2.0"
 
 // tag::remove-akka-persistence-cassandra-version[]
-val AkkaPersistenceCassandraVersion = "1.0.6"
+val AkkaPersistenceCassandraVersion = "1.1.0"
 // end::remove-akka-persistence-cassandra-version[]
 // tag::add-akka-persistence-jdbc-version[]
-val AkkaPersistenceJdbcVersion = "5.1.0"
+val AkkaPersistenceJdbcVersion = "5.2.0"
 // end::add-akka-persistence-jdbc-version[]
 // tag::remove-alpakka-kafka-version[]
-val AlpakkaKafkaVersion = "3.0.1"
+val AlpakkaKafkaVersion = "4.0.0"
 // end::remove-alpakka-kafka-version[]
 // tag::remove-akka-projection-version[]
-val AkkaProjectionVersion = "1.2.5"
+val AkkaProjectionVersion = "1.3.0"
 // end::remove-akka-projection-version[]
 
 // tag::remove-grpc-plugin[]
@@ -92,7 +92,7 @@ libraryDependencies ++= Seq(
 
   // Logging
   "com.typesafe.akka" %% "akka-slf4j" % AkkaVersion,
-  "ch.qos.logback" % "logback-classic" % "1.2.9",
+  "ch.qos.logback" % "logback-classic" % "1.2.11",
   // Test dependencies
   "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
   "com.typesafe.akka" %% "akka-persistence-testkit" % AkkaVersion % Test,

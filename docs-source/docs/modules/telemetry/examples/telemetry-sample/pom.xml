@@ -17,7 +17,7 @@
 
     <!--
         TODO: Remove `lightbend.cinnamon.version` after releasing 2.16.0 and
-        updating it on akka-platform-dependencies
+        updating it on akka-dependencies
     -->
     <!-- tag::telemetry-build-properties[] -->
     <properties>
@@ -45,8 +45,8 @@
         <dependencies>
             <dependency>
                 <groupId>com.lightbend.akka</groupId>
-                <artifactId>akka-platform-dependencies_${scala.binary.version}</artifactId>
-                <version>0.3.0</version>
+                <artifactId>akka-dependencies_${scala.binary.version}</artifactId>
+                <version>22.10.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

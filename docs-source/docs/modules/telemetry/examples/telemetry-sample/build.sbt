@@ -17,7 +17,7 @@ Compile / scalacOptions ++= Seq(
   "-Xlint")
 
 // tag::telemetry-build-properties[]
-val AkkaVersion = "2.6.20"
+val AkkaVersion = "2.7.0"
 // end::telemetry-build-properties[]
 
 libraryDependencies ++= Seq(
