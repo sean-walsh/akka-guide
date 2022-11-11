@@ -1,6 +1,6 @@
 site:
   title: "Akka Guide"
-  url: https://developer.lightbend.com/docs/akka-platform-guide
+  url: https://developer.lightbend.com/docs/akka-guide
   
 content:
   sources:
