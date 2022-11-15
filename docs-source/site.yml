@@ -1,10 +1,10 @@
 site:
   title: "Akka Guide"
-  url: https://developer.lightbend.com/docs/akka-platform-guide
+  url: https://developer.lightbend.com/docs/akka-guide
   
 content:
   sources:
-  - url: git@github.com:akka/akka-platform-guide.git
+  - url: git@github.com:akka/akka-guide.git
     start-paths:
     - docs-source/docs
     branches: [current]

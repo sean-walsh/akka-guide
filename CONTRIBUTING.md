@@ -12,7 +12,7 @@ You may also check out these [other resources](https://akka.io/get-involved/).
 
 # Antora-based Akka Documentation
 
-This folder contains the sources for parts of the [Akka Guide web site](https://developer.lightbend.com/docs/akka-platform-guide).
+This folder contains the sources for parts of the [Akka Guide web site](https://developer.lightbend.com/docs/akka-guide).
 
 This folder is structured as follows:
 - The root directory contains the `Makefile` for the documentation generation process.
