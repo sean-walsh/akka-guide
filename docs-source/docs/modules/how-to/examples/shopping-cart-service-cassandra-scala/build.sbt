@@ -31,6 +31,7 @@ val AkkaPersistenceCassandraVersion = "1.1.0"
 // end::akka-persistence-cassandra[]
 val AlpakkaKafkaVersion = "4.0.0"
 val AkkaProjectionVersion = "1.3.0"
+val AkkaDiagnosticsVersion = "2.0.0-M4"
 
 enablePlugins(AkkaGrpcPlugin)
 
@@ -49,7 +50,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-cluster-sharding-typed" % AkkaVersion,
   "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion % Test,
   "com.typesafe.akka" %% "akka-stream-testkit" % AkkaVersion % Test,
-  // Akka Management powers Health Checks and Akka Cluster Bootstrapping
+  // Akka Management powers Health Checks, Akka Cluster Bootstrapping, and Akka Diagnostics
   "com.lightbend.akka.management" %% "akka-management" % AkkaManagementVersion,
   "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
   "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion,
@@ -57,6 +58,7 @@ libraryDependencies ++= Seq(
   "com.lightbend.akka.management" %% "akka-management-cluster-bootstrap" % AkkaManagementVersion,
   "com.lightbend.akka.discovery" %% "akka-discovery-kubernetes-api" % AkkaManagementVersion,
   "com.typesafe.akka" %% "akka-discovery" % AkkaVersion,
+  "com.lightbend.akka" %% "akka-diagnostics" % AkkaDiagnosticsVersion,
   // Common dependencies for logging and testing
   "com.typesafe.akka" %% "akka-slf4j" % AkkaVersion,
   "ch.qos.logback" % "logback-classic" % "1.2.11",

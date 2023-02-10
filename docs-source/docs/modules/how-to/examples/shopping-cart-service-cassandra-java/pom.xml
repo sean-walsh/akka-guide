@@ -27,6 +27,7 @@
              It can be defined with -Dversion.number=0.1-SNAPSHOT if git is not used -->
         <version.number>${git.commit.time}-${git.commit.id.abbrev}</version.number>
         <!-- tag::akka-persistence-cassandra[] -->
+        <akka-diagnostics.version>2.0.0-M4</akka-diagnostics.version>
     </properties>
     <!-- end::akka-persistence-cassandra[] -->
 
@@ -108,6 +109,11 @@
         <dependency>
             <groupId>com.lightbend.akka.grpc</groupId>
             <artifactId>akka-grpc-runtime_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.akka</groupId>
+            <artifactId>akka-diagnostics_${scala.binary.version}</artifactId>
+            <version>${akka-diagnostics.version}</version>
         </dependency>
 
         <dependency>

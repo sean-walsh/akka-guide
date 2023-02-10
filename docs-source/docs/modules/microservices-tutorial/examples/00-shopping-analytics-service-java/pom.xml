@@ -24,6 +24,7 @@
         <!-- Version of the Docker image is derived from git commit.
              It can be defined with -Dversion.number=0.1-SNAPSHOT if git is not used -->
         <version.number>${git.commit.time}-${git.commit.id.abbrev}</version.number>
+        <akka-diagnostics.version>2.0.0-M4</akka-diagnostics.version>
     </properties>
 
     <dependencyManagement>
@@ -101,6 +102,11 @@
         <dependency>
             <groupId>com.lightbend.akka.grpc</groupId>
             <artifactId>akka-grpc-runtime_${scala.binary.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lightbend.akka</groupId>
+            <artifactId>akka-diagnostics_${scala.binary.version}</artifactId>
+            <version>${akka-diagnostics.version}</version>
         </dependency>
 
         <dependency>

@@ -38,6 +38,7 @@ val AlpakkaKafkaVersion = "4.0.0"
 // tag::remove-akka-projection-version[]
 val AkkaProjectionVersion = "1.3.0"
 // end::remove-akka-projection-version[]
+val AkkaDiagnosticsVersion = "2.0.0-M4"
 
 // tag::remove-grpc-plugin[]
 enablePlugins(AkkaGrpcPlugin)
@@ -83,6 +84,7 @@ libraryDependencies ++= Seq(
   "com.lightbend.akka.management" %% "akka-management-cluster-http" % AkkaManagementVersion,
   "com.lightbend.akka.management" %% "akka-management-cluster-bootstrap" % AkkaManagementVersion,
   "com.lightbend.akka.discovery" %% "akka-discovery-kubernetes-api" % AkkaManagementVersion,
+  "com.lightbend.akka" %% "akka-diagnostics" % AkkaDiagnosticsVersion,
   "com.typesafe.akka" %% "akka-persistence-typed" % AkkaVersion,
   "com.typesafe.akka" %% "akka-serialization-jackson" % AkkaVersion,
   "com.typesafe.akka" %% "akka-discovery" % AkkaVersion,
