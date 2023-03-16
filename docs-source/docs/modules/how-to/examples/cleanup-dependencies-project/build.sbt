@@ -34,7 +34,7 @@ val AkkaManagementVersion = "1.2.0"
 val AkkaPersistenceCassandraVersion = "1.1.0"
 // end::remove-akka-persistence-cassandra-version[]
 // tag::add-akka-persistence-jdbc-version[]
-val AkkaPersistenceJdbcVersion = "5.2.0"
+val AkkaPersistenceJdbcVersion = "5.2.1"
 // end::add-akka-persistence-jdbc-version[]
 // tag::remove-alpakka-kafka-version[]
 val AlpakkaKafkaVersion = "4.0.0"
