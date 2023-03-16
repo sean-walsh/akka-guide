@@ -4,7 +4,7 @@ addSbtPlugin("com.lightbend.cinnamon" % "sbt-cinnamon" % "2.17.1")
 // end::telemetry-sbt-plugin[]
 
 // tag::telemetry-javaagent-docker[]
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.8.1")
+addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.13")
 // end::telemetry-javaagent-docker[]
 
 addSbtPlugin("com.dwijnand" % "sbt-dynver" % "4.1.1")

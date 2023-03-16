@@ -19,7 +19,11 @@ Test / parallelExecution := false
 Test / testOptions += Tests.Argument("-oDF")
 Test / logBuffered := false
 
-run / fork := false
+run / fork := true
+// pass along config selection to forked jvm
+run / javaOptions ++= sys.props
+  .get("config.resource")
+  .fold(Seq.empty[String])(res => Seq(s"-Dconfig.resource=$res"))
 Global / cancelable := false // ctrl-c
 
 val AkkaVersion = "2.7.0"
@@ -38,7 +42,7 @@ val AlpakkaKafkaVersion = "4.0.0"
 // tag::remove-akka-projection-version[]
 val AkkaProjectionVersion = "1.3.0"
 // end::remove-akka-projection-version[]
-val AkkaDiagnosticsVersion = "2.0.0-M4"
+val AkkaDiagnosticsVersion = "2.0.0"
 
 // tag::remove-grpc-plugin[]
 enablePlugins(AkkaGrpcPlugin)
