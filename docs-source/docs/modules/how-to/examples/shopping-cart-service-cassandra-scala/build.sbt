@@ -34,7 +34,7 @@ val AkkaPersistenceCassandraVersion = "1.1.0"
 
 // end::akka-persistence-cassandra[]
 val AlpakkaKafkaVersion = "4.0.0"
-val AkkaProjectionVersion = "1.3.0"
+val AkkaProjectionVersion = "1.3.1"
 val AkkaDiagnosticsVersion = "2.0.0"
 
 enablePlugins(AkkaGrpcPlugin)

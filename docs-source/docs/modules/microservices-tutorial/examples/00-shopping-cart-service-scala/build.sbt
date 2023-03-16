@@ -31,7 +31,7 @@ val AkkaHttpVersion = "10.5.0"
 val AkkaManagementVersion = "1.2.0"
 val AkkaPersistenceJdbcVersion = "5.2.1"
 val AlpakkaKafkaVersion = "4.0.0"
-val AkkaProjectionVersion = "1.3.0"
+val AkkaProjectionVersion = "1.3.1"
 val AkkaDiagnosticsVersion = "2.0.0"
 val ScalikeJdbcVersion = "3.5.0"
 
