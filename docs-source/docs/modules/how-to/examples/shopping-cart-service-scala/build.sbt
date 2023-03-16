@@ -26,7 +26,7 @@ run / javaOptions ++= sys.props
   .fold(Seq.empty[String])(res => Seq(s"-Dconfig.resource=$res"))
 Global / cancelable := false // ctrl-c
 
-val AkkaVersion = "2.7.0"
+val AkkaVersion = "2.8.0"
 // tag::dependencies-for-healthchecks[]
 val AkkaHttpVersion = "10.5.0"
 val AkkaManagementVersion = "1.2.0"
