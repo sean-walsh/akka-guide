@@ -12,7 +12,7 @@ object Main {
   val logger = LoggerFactory.getLogger("shopping.cart.Main")
 
   def main(args: Array[String]): Unit = {
-    val system = ActorSystem[Nothing](Behaviors.empty, "ShoppingCartService")
+    val system = ActorSystem[Nothing](Behaviors.empty, "shopping-cart-service")
     try {
       init(system)
     } catch {
