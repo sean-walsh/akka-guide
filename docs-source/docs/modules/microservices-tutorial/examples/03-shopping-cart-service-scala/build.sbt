@@ -13,6 +13,7 @@ Compile / scalacOptions ++= Seq(
   "-unchecked",
   "-Xlog-reflective-calls",
   "-Xlint")
+
 Compile / javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 Test / parallelExecution := false
@@ -24,23 +25,24 @@ run / fork := true
 run / javaOptions ++= sys.props
   .get("config.resource")
   .fold(Seq.empty[String])(res => Seq(s"-Dconfig.resource=$res"))
+
 Global / cancelable := false // ctrl-c
 
 val AkkaVersion = "2.8.0"
 val AkkaHttpVersion = "10.5.0"
-val AkkaManagementVersion = "1.2.0"
+val AkkaManagementVersion = "1.3.0"
 val AkkaPersistenceJdbcVersion = "5.2.1"
 val AlpakkaKafkaVersion = "4.0.0"
 val AkkaProjectionVersion = "1.3.1"
 val AkkaDiagnosticsVersion = "2.0.0"
 val ScalikeJdbcVersion = "3.5.0"
 
-enablePlugins(AkkaGrpcPlugin)
+enablePlugins(AkkaGrpcPlugin, JavaAppPackaging, DockerPlugin)
 
-enablePlugins(JavaAppPackaging, DockerPlugin)
-dockerBaseImage := "docker.io/library/adoptopenjdk:11-jre-hotspot"
-dockerUsername := sys.props.get("docker.username")
-dockerRepository := sys.props.get("docker.registry")
+dockerExposedPorts := Seq(8101, 8558)
+dockerUpdateLatest := true
+dockerBaseImage := "adoptopenjdk:11-jre-hotspot"
+
 ThisBuild / dynverSeparator := "-"
 
 libraryDependencies ++= Seq(
