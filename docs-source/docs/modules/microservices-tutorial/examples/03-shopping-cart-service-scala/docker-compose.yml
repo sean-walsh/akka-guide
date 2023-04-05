@@ -59,4 +59,3 @@ services:
       - kafka
     environment:
       - TARGETS=kafka:9092
-
