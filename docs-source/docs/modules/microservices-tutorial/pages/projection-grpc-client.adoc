@@ -39,7 +39,7 @@ Let's add the service that handles shopping cart orders. The template and source
 
 . Open the `shopping-order-service` in IntelliJ just as you did with xref:template.adoc#intellij[ the shopping-cart-service]. 
 
-. Define the interface of the service in a protobuf service descriptor. It should be located in the `src/main/protobuf/ShoppingOrderService.proto` in the new `shopping-order-service` project.
+. Define the interface of the service in a protobuf service descriptor. It should be located in the `src/main/protobuf/ShoppingOrderService.proto` in the new `shopping-order-service` projjjt.
 +
 [source,protobuf]
 ----
@@ -296,6 +296,31 @@ When finished:
 [source,shell script]
 ----
 docker-compose stop
+----
+
+// TODO: Add short description of kubernetes and how to run the app based on akka-cluster.yml and namespace.json links.
+// below is an example
+
+=== Kubernetes option
+. As an alternative, you can run the project using https://kubernetes.io/[Kubernetes] with the following command and configuration files:
++
+[source, shell scrpt]
+----
+kubectl -f kubernetes/akka-cluster.yaml
+----
+
+. akka-cluster.yml
++
+[source, shell script]
+----
+include::example$shopping-cart-service-scala/kubernetes/akka-cluster.yml[]
+----
+
+. namespace.json
++
+[source, shell script]
+----
+include::example$shopping-cart-service-scala/kubernetes/namespace.json[]
 ----
 
 :!sectnums:
