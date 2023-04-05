@@ -14,7 +14,7 @@ public class Main {
   private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
   public static void main(String[] args) {
-    ActorSystem<Void> system = ActorSystem.create(Behaviors.empty(), "ShoppingCartService"); // <1>
+    ActorSystem<Void> system = ActorSystem.create(Behaviors.empty(), "shopping-cart-service"); // <1>
     try {
       init(system);
     } catch (Exception e) {

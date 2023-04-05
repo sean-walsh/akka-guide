@@ -619,3 +619,21 @@ cp -R ${SRC} ${tutorial_root}/03-shopping-cart-service-scala/src/main/resources/
 cp -R ${SRC} ${tutorial_root}/04-shopping-cart-service-scala/src/main/resources/
 cp -R ${SRC} ${tutorial_root}/05-shopping-cart-service-scala/src/main/resources/
 cp -R ${SRC} ${tutorial_root}/shopping-cart-service-scala/src/main/resources/
+
+# java only project kubernetes files
+declare SRC="${tutorial_root}/00-shopping-cart-service-java/kubernetes"
+cp -R ${SRC} ${tutorial_root}/01-shopping-cart-service-java/
+cp -R ${SRC} ${tutorial_root}/02-shopping-cart-service-java/
+cp -R ${SRC} ${tutorial_root}/03-shopping-cart-service-java/
+cp -R ${SRC} ${tutorial_root}/04-shopping-cart-service-java/
+cp -R ${SRC} ${tutorial_root}/05-shopping-cart-service-java/
+cp -R ${SRC} ${tutorial_root}/shopping-cart-service-java/
+
+# java only kubernetes config file
+declare SRC="${tutorial_root}/00-shopping-cart-service-java/src/main/resources/kubernetes-application.conf"
+cp -R ${SRC} ${tutorial_root}/01-shopping-cart-service-java/src/main/resources/
+cp -R ${SRC} ${tutorial_root}/02-shopping-cart-service-java/src/main/resources/
+cp -R ${SRC} ${tutorial_root}/03-shopping-cart-service-java/src/main/resources/
+cp -R ${SRC} ${tutorial_root}/04-shopping-cart-service-java/src/main/resources/
+cp -R ${SRC} ${tutorial_root}/05-shopping-cart-service-java/src/main/resources/
+cp -R ${SRC} ${tutorial_root}/shopping-cart-service-java/src/main/resources/
