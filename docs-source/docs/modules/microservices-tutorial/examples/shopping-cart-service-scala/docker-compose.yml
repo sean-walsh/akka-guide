@@ -42,10 +42,8 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
 
   kafka-consumer:
-    # Disable this line if not using mac arm processor.
-    platform: linux/amd64
-    image: wurstmeister/kafka:2.13-2.7.0
-    command: bash -c "mkdir -vp /tmp/kafka-logs && /opt/kafka_2.13-2.7.0/bin/kafk-console-consumer.sh --zookeeper zookeeper:2181 --from-beginning --topic-name > /tmp/kafka-logs/topic-name.log"
+    image: ubuntu/kafka:3.1-22.04_beta
+    command: bash -c "mkdir -vp /tmp/kafka-logs && /opt/kafka_3.1-22.04/bin/kafk-console-consumer.sh --zookeeper zookeeper:2181 --from-beginning --topic-name > /tmp/kafka-logs/topic-name.log"
     ports:
       - "9094:9092"
     links:
@@ -55,11 +53,9 @@ services:
       - ./kafka-1-logs:/tmp/kafka-logs
 
   wait-for-kafka:
-    # Disable this line if not using mac arm processor.
     platform: linux/amd64
     image: waisbrot/wait
     links:
       - kafka
     environment:
       - TARGETS=kafka:9092
-
