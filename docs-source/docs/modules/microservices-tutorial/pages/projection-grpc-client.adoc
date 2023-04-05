@@ -298,9 +298,6 @@ When finished:
 docker-compose stop
 ----
 
-// TODO: Add short description of kubernetes and how to run the app based on akka-cluster.yml and namespace.json links.
-// below is an example
-
 === Kubernetes option
 . As an alternative, you can run the project using https://kubernetes.io/[Kubernetes] with the following command and configuration files:
 +
