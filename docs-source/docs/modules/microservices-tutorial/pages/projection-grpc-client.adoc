@@ -39,7 +39,7 @@ Let's add the service that handles shopping cart orders. The template and source
 
 . Open the `shopping-order-service` in IntelliJ just as you did with xref:template.adoc#intellij[ the shopping-cart-service]. 
 
-. Define the interface of the service in a protobuf service descriptor. It should be located in the `src/main/protobuf/ShoppingOrderService.proto` in the new `shopping-order-service` projjjt.
+. Define the interface of the service in a protobuf service descriptor. It should be located in the `src/main/protobuf/ShoppingOrderService.proto` in the new `shopping-order-service` project.
 +
 [source,protobuf]
 ----
