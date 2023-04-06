@@ -21,6 +21,13 @@ spec:
           image: shopping-cart-service:latest
           # remove for real clusters, useful for minikube
           imagePullPolicy: Never
+          # resources tested with default kubernetes instance on docker desktop
+          resources:
+            limits:
+              memory: "1Gi"
+            requests:
+              memory: "1Gi"
+              cpu: "1000m"
           readinessProbe:
             httpGet:
               path: /ready
@@ -50,31 +57,5 @@ spec:
                   fieldPath: metadata.namespace
             - name: REQUIRED_CONTACT_POINT_NR
               value: "2"
-            - name: JAVA_OPTS
-              value: "-Dconfig.resource=kubernetes-application.conf"
-
----
-kind: Role
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: pod-reader
-  namespace: shopping-cart-namespace
-rules:
-  - apiGroups: [""] # "" indicates the core API group
-    resources: ["pods"]
-    verbs: ["get", "watch", "list"]
----
-kind: RoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: read-pods
-  namespace: shopping-cart-namespace
-subjects:
-  # Note the `name` line below. The first default refers to the namespace. The second refers to the service account name.
-  # For instance, `name: system:serviceaccount:myns:default` would refer to the default service account in namespace `myns`
-  - kind: User
-    name: system:serviceaccount:shopping-cart-namespace:default
-roleRef:
-  kind: Role
-  name: pod-reader
-  apiGroup: rbac.authorization.k8s.io
+            - name: JAVA_TOOL_OPTIONS
+              value: "-XX:InitialRAMPercentage=75 -XX:MaxRAMPercentage=75"
