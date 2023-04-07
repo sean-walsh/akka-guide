@@ -311,11 +311,19 @@ docker-compose stop
 3) sbt docker:publishLocal
 4) kubectl apply -f kubernetes/namespace.json
 5) kubectl config set-context --current --namespace=shopping-cart-namespace
-6) kubectl apply -f kubernetes/akka-cluster.yml
-7) kubectl expose deployment shopping-cart-service --type=LoadBalancer --name=shopping-cart-service
+6) kubectl apply -f kubernetes/akka-cluster-roles.yml
+7) kubectl apply -f kubernetes/akka-cluster.yml
+8) kubectl expose deployment shopping-cart-service --type=LoadBalancer --name=shopping-cart-service
 
-// all should be in ready state
+// all pods should be in ready state
 8) kubectl get pods
+----
+
+. akka-cluster-roles.yml
++
+[source, shell script]
+----
+include::example$shopping-cart-service-scala/kubernetes/akka-cluster-roles.yml[]
 ----
 
 . akka-cluster.yml

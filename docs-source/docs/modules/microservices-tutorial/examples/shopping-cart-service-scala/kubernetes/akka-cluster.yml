@@ -25,10 +25,10 @@ spec:
           #   and tuned for production environments!
           resources:
             limits:
-              memory: "1Gi"
+              memory: "1Gi"   # update to 2Gi for larger workloads
             requests:
-              memory: "1Gi"
-              cpu: "1000m"
+              memory: "1Gi"   # update to 2Gi for larger workloads
+              cpu: "1000m"    # update to 2000m for larger workloads
           readinessProbe:
             httpGet:
               path: /ready
