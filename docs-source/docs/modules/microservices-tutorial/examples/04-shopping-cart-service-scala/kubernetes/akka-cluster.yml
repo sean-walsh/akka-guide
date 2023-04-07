@@ -21,7 +21,8 @@ spec:
           image: shopping-cart-service:latest
           # remove for real clusters, useful for minikube
           imagePullPolicy: Never
-          # resources tested with default kubernetes instance on docker desktop
+          # resources tested with default kubernetes instance on docker desktop, these will need to be increased
+          #   and tuned for production environments!
           resources:
             limits:
               memory: "1Gi"
