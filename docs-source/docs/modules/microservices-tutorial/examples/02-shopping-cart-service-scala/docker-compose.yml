@@ -1,6 +1,8 @@
-version: '2.2'
+version: '2.4'
 services:
   postgres-db:
+    # uncomment if running on apple silicon
+    # platform: linux/arm64/v8
     image: postgres:latest
     ports:
       - 5432:5432
@@ -10,6 +12,8 @@ services:
 
   # this second PostgresSQL is used when running test
   postgres-db-test:
+    # uncomment if running on apple silicon
+    # platform: linux/arm64/v8
     image: postgres:latest
     ports:
       - 5433:5432
@@ -19,15 +23,19 @@ services:
       POSTGRES_PASSWORD: shopping-cart
 
   # See dockerhub for different versions of kafka and zookeeper
-  # https://hub.docker.com/r/wurstmeister/kafka/
-  # https://hub.docker.com/r/wurstmeister/zookeeper/
+  # https://hub.docker.com/r/ubuntu/kafka/
+  # https://hub.docker.com/r/ubuntu/zookeeper/
   zookeeper:
-    image: zookeeper:3.6.2
+    # uncomment if running on apple silicon
+    # platform: linux/arm64/v8
+    image: ubuntu/zookeeper:latest
     ports:
       - "2181:2181"
 
   kafka:
-    image: wurstmeister/kafka:2.13-2.7.0
+    # uncomment if running on apple silicon
+    # platform: linux/arm64/v8
+    image: ubuntu/kafka:latest
     ports:
       - "9092:9092"
     environment:
@@ -35,8 +43,10 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
 
   kafka-consumer:
-    image: wurstmeister/kafka:2.13-2.7.0
-    command: bash -c "mkdir -vp /tmp/kafka-logs && /opt/kafka_2.13-2.7.0/bin/kafk-console-consumer.sh --zookeeper zookeeper:2181 --from-beginning --topic-name > /tmp/kafka-logs/topic-name.log"
+    # uncomment if running on apple silicon
+    # platform: linux/arm64/v8
+    image: ubuntu/kafka:latest
+    command: bash -c "mkdir -vp /tmp/kafka-logs && /opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --from-beginning --topic-name > /tmp/kafka-logs/topic-name.log"
     ports:
       - "9094:9092"
     links:
