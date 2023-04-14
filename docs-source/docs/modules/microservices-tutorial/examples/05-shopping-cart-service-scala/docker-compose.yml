@@ -2,7 +2,7 @@ version: '2.4'
 services:
   postgres-db:
     # uncomment when using apple silicon
-    platform: linux/arm64/v8
+    # platform: linux/arm64/v8
     image: postgres:latest
     ports:
       - 5432:5432
@@ -13,7 +13,7 @@ services:
   # this second PostgresSQL is used when running test
   postgres-db-test:
     # uncomment when using apple silicon
-    platform: linux/arm64/v8
+    # platform: linux/arm64/v8
     image: postgres:latest
     ports:
       - 5433:5432
@@ -24,14 +24,14 @@ services:
 
   zookeeper:
     # uncomment when using apple silicon
-    platform: linux/arm64/v8
+    # platform: linux/arm64/v8
     image: ubuntu/zookeeper
     ports:
       - "2181:2181"
 
   kafka:
     # uncomment when using apple silicon
-    platform: linux/arm64/v8
+    # platform: linux/arm64/v8
     image: ubuntu/kafka
     ports:
       - "9092:9092"
