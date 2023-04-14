@@ -170,6 +170,80 @@ Note the log output from the `ShoppingCartServer`
 Shopping online at gRPC server 127.0.0.1:8101
 ----
 
+=== Run in Kubernetes
+. As an alternative, you can run the project using docker within https://kubernetes.io/[Kubernetes] with the following commands and configuration files:
++
+[source, shell script]
+----
+1) docker-compose up -d
+
+// example for #2: docker exec -i shopping-cart-service-scala-postgres-db_1 psql -U shopping-cart -t < ddl-scripts/create_tables.sql
+2) docker exec -i <<image id>> psql -U shopping-cart -t < ddl-scripts/create_tables.sql
+
+3) sbt docker:publishLocal
+4) kubectl apply -f kubernetes/namespace.json
+5) kubectl config set-context --current --namespace=shopping-cart-namespace
+6) kubectl apply -f kubernetes/akka-cluster.yml
+7) kubectl expose deployment shopping-cart-service --type=LoadBalancer --name=shopping-cart-service
+
+// all should be in ready state
+8) kubectl get pods
+----
+
+. akka-cluster.yml
++
+[source, shell script]
+----
+include::example$shopping-cart-service-scala/kubernetes/akka-cluster.yml[]
+----
+
+. namespace.json
++
+[source, shell script]
+----
+include::example$shopping-cart-service-scala/kubernetes/namespace.json[]
+----
+
+=== Build the service
+The [.group-scala]#`build.sbt and project/plugins.sbt`# [.group-java]#`pom.xml`# contains build plugin settings for building a Docker image.
+
+[.group-java]
+****
+The version number of the image is derived from the git commit. If you see error "Given Docker name 'shopping-cart-service:${git.commit.time}-${git.commit.id.abbrev}' is invalid" it is because the directory is not a git repository. You can enable git for the directory with the following commands.
+
+[source,shell script]
+----
+git init
+git add .
+git commit -m "some descriptive commit message"
+----
+
+Alternatively the version can be specified with `-Dversion.number=0.1-SNAPSHOT`.
+----
+mvn -Dversion.number=0.1-SNAPSHOT -DskipTests -Ddocker.registry=803424716218.dkr.ecr.eu-central-1.amazonaws.com clean package docker:push
+----
+****
+[.group-scala]
+****
+The version number of the image, as well as from the project itself, is derived from the git commit using https://github.com/dwijnand/sbt-dynver[sbt-dynver {tab-icon}, window="tab"]. If your project is not being versioned with git, you will see a fixed version number (eg: `HEAD-20210119-1515`). You can enable git for the directory with the following commands.
+
+[source,shell script]
+----
+git init
+git add .
+git commit -m "some descriptive commit message"
+----
+
+Alternatively you can add the version to your `build.sbt` file and maintain it manually.
+
+[source,shell script]
+----
+version := "1.0.0"
+----
+****
+include::partial$build-docker-for-kube.adoc[]
+
+
 === Exercise the service
 
 // # tag::exercise[]
