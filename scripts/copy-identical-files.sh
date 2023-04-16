@@ -163,21 +163,10 @@ cp ${SRC} ${tutorial_root}/04-shopping-cart-service-java/ddl-scripts/
 cp ${SRC} ${tutorial_root}/05-shopping-cart-service-java/ddl-scripts/
 cp ${SRC} ${tutorial_root}/shopping-cart-service-java/ddl-scripts/
 
-# copy production application.conf to each shopping cart service project
 declare SRC="${tutorial_root}/00-shopping-cart-service-scala/src/main/resources/application.conf"
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-scala/src/main/resources/
-cp ${SRC} ${tutorial_root}/02-shopping-cart-service-scala/src/main/resources/
-cp ${SRC} ${tutorial_root}/03-shopping-cart-service-scala/src/main/resources/
-cp ${SRC} ${tutorial_root}/04-shopping-cart-service-scala/src/main/resources/
-cp ${SRC} ${tutorial_root}/05-shopping-cart-service-scala/src/main/resources/
-cp ${SRC} ${tutorial_root}/shopping-cart-service-scala/src/main/resources/
 cp ${SRC} ${tutorial_root}/00-shopping-cart-service-java/src/main/resources/
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-java/src/main/resources/
-cp ${SRC} ${tutorial_root}/02-shopping-cart-service-java/src/main/resources/
-cp ${SRC} ${tutorial_root}/03-shopping-cart-service-java/src/main/resources/
-cp ${SRC} ${tutorial_root}/04-shopping-cart-service-java/src/main/resources/
-cp ${SRC} ${tutorial_root}/05-shopping-cart-service-java/src/main/resources/
-cp ${SRC} ${tutorial_root}/shopping-cart-service-java/src/main/resources/
 
 declare SRC="${tutorial_root}/00-shopping-cart-service-scala/src/main/resources/cluster.conf"
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-scala/src/main/resources/
