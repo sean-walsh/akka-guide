@@ -590,6 +590,13 @@ cp ${SRC} ${tutorial_root}/03-shopping-cart-service-java/src/main/resources/
 cp ${SRC} ${tutorial_root}/02-shopping-cart-service-java/src/main/resources/
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-java/src/main/resources/
 
+declare SRC="${tutorial_root}/04-shopping-cart-service-scala/src/main/resources/application.conf"
+cp ${SRC} ${tutorial_root}/03-shopping-cart-service-scala/src/main/resources/
+cp ${SRC} ${tutorial_root}/02-shopping-cart-service-scala/src/main/resources/
+
+cp ${SRC} ${tutorial_root}/03-shopping-cart-service-java/src/main/resources/
+cp ${SRC} ${tutorial_root}/02-shopping-cart-service-java/src/main/resources/
+
 # from 02
 declare SRC="${tutorial_root}/02-shopping-cart-service-scala/src/main/protobuf/ShoppingCartService.proto"
 cp ${SRC} ${tutorial_root}/01-shopping-cart-service-scala/src/main/protobuf/
