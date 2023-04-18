@@ -175,19 +175,14 @@ Shopping online at gRPC server 127.0.0.1:8101
 +
 [source, shell script]
 ----
-1) docker-compose up -d
-
-// example for #2: docker exec -i shopping-cart-service-scala-postgres-db_1 psql -U shopping-cart -t < ddl-scripts/create_tables.sql
-2) docker exec -i <<image id>> psql -U shopping-cart -t < ddl-scripts/create_tables.sql
-
-3) sbt docker:publishLocal
-4) kubectl apply -f kubernetes/namespace.json
-5) kubectl config set-context --current --namespace=shopping-cart-namespace
-6) kubectl apply -f kubernetes/akka-cluster.yml
-7) kubectl expose deployment shopping-cart-service --type=LoadBalancer --name=shopping-cart-service
+1) sbt docker:publishLocal
+2) kubectl apply -f kubernetes/namespace.json
+3) kubectl config set-context --current --namespace=shopping-cart-namespace
+4) kubectl apply -f kubernetes/akka-cluster.yml
+8) kubectl expose deployment shopping-cart-service --type=LoadBalancer --name=shopping-cart-service
 
 // all should be in ready state
-8) kubectl get pods
+6) kubectl get pods
 ----
 
 . akka-cluster.yml
