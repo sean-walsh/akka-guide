@@ -178,6 +178,7 @@
                     <compilerArgs>
                         <arg>-Xlint:unchecked</arg>
                         <arg>-Xlint:deprecation</arg>
+                        <art>-parameters</art>
                     </compilerArgs>
                 </configuration>
             </plugin>
